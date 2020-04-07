@@ -1,0 +1,34 @@
+﻿@model Calculator.Models.CalculatorOp
+
+@{
+    ViewData["Title"] = "Calculator";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <form asp-action="Index" class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+                <div class="form-group">
+                    <input type="number" class="form-control" name="num1" value="@ViewData["num1"]" />
+                </div>
+                <div class="form-group" style="font-size:30px">
+                    <label style="color:white">@ViewData["op"] </label>
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" name="num2" value="@ViewData["num2"]" />
+                </div>
+                <div class="form-group" style="font-size:30px">
+                    <label style="color:white"> = </label>
+                    <label style="color:white"> @Model.Total </label>
+                </div>
+            </div>
+            <br />
+            <button name="button" value="+">Soma</button>
+            <button name="button" value="-">Sub</button>
+            <button name="button" value="*">Mult</button>
+            <button name="button" value="/">Div</button>
+        </form>
+    </div>
+</nav>
