@@ -1,6 +1,17 @@
+*{
+    margin: 15px auto;
+    text-align: center;
+    background-color: aqua;
+}
+
+h3{
+    font-size: 35px;
+    margin: 30px;
+}
+
 .grid{
     display: flex;
     flex-wrap: wrap;
     height: 300px;
-    width: 400px;
+    width: 500px;
 }
